@@ -1,0 +1,47 @@
+{
+  "FieldDefinitions": [
+    {
+      "Value": "(ABC)",
+      "FieldId": "StringField",
+      "FieldName": "String Field",
+      "FieldType": "string",
+      "Validation": {
+        "required": true,
+        "pattern": {
+          "message": "2/3 upper case letters",
+          "params": "^[A-Z]{2,3}$"}
+      }
+    },
+    {
+      "Value": "(AB)",
+      "FieldId": "StringFieldTwo",
+      "FieldName": "String Field Two",
+      "FieldType": "string",
+      "Validation": {
+        "required": true,
+        "minLength": 1,
+        "maxLength": 2
+      }
+    },
+    {
+      "Value": "",
+      "FieldId": "EnumeratedFieldList",
+      "FieldName": "Enumerated Field List",
+      "FieldType": "enum",
+      "EnumValues": [
+        "Option One (With Gravy)",
+        "Option Two (With Gravy)",
+        "Option Three (With Gravy)"
+      ],
+      "Validation": {
+        "required": true
+      }
+    },
+    {
+      "Value": true,
+      "FieldId": "BooleanField",
+      "FieldName": "Boolean Field",
+      "FieldType": "bool"
+    }
+  ]
+}
