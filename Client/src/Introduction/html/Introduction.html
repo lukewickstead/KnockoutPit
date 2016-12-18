@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>#Knockout Introduction</title>
+
+    <script src="../../../lib/jquery-3.1.1.js"></script>
+    <script src="../../../lib/knockout-3.4.1.js"></script>
+
+    <script src="../js/introduction.js"></script>
+</head>
+<body>
+
+<label for="firstName">First name:</label><input id="firstName" data-bind="value: firstName"/>
+<label for="lastName">Last name:</label><input id="lastName" data-bind="value: lastName"/>
+
+<!-- This is a bound click event -->
+<button data-bind="click: clear">Clear</button>
+
+<!-- A view is HTML markup which defines the UI and how it is mapped to your model -->
+<p>First name: <span data-bind="text: firstName"></span></p>
+<p>Last name: <span data-bind="text: lastName"></span></p>
+<p>Hello: <span data-bind="text: fullName"></span></p>
+</body>
+</html>

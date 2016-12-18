@@ -1,0 +1,29 @@
+{
+  "id": "Sport",
+  "mails": [
+    {
+      "id": 1,
+      "date": "5 June 2016",
+      "subject": "Plymouth Argyle win the FA Cup!",
+      "genre": "sport"
+    },
+    {
+      "id": 2,
+      "date": "4 June 2016",
+      "subject": "England win the Euros!!!",
+      "genre": "sport"
+    },
+    {
+      "id": 3,
+      "date": "3 June 2016",
+      "subject": "Plymouth Argyle are promoted to the Premier League",
+      "genre": "sport"
+    },
+    {
+      "id": 4,
+      "date": "2 June 2016",
+      "subject": "Plymouth Argyle win the Premier League!!!",
+      "genre": "sport"
+    }
+  ]
+}

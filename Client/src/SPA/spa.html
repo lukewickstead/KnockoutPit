@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Page Application</title>
+
+    <link href="spa.css" type="text/css" rel="stylesheet"/>
+
+    <script src="../../lib/jquery-3.1.1.js"></script>
+    <script src="../../lib/knockout-3.4.1.js"></script>
+
+    <script src="spa.js"></script>
+</head>
+<body>
+
+<!-- Folders -->
+<ul class="genres" data-bind="foreach: genres">
+    <li data-bind="text: $data, css: { selected: $data == $root.chosenGenreId() }, click: $root.goToGenre"></li>
+</ul>
+
+<!-- News Articles -->
+<table class="newsArticles" data-bind="with: chosenGenre">
+    <thead>
+    <tr>
+        <th>Subject</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: mails">
+    <tr data-bind="click: $root.goToArticle">
+        <td data-bind="text: subject"></td>
+        <td data-bind="text: date"></td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- Selected News Article -->
+<div data-bind="with: chosenArticle">
+    <div>
+        <h1 data-bind="text: subject"></h1>
+        <p><label>Date</label>: <span data-bind="text: date"></span></p>
+    </div>
+    <p class="message" data-bind="html: content"></p>
+</div>
+
+</body>
+</html>

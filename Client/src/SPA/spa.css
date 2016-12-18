@@ -1,0 +1,12 @@
+ul li {
+    display: inline-block;
+    background-color: gray;
+    padding: 20px 20px;
+    border: solid thin black;
+    margin: 0 -4px 0 0;
+}
+
+li.selected {
+    background-color: black;
+    color: white;
+}

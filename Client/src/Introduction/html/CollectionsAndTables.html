@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collections</title>
+
+    <script src="../../../lib/jquery-3.1.1.js"></script>
+    <script src="../../../lib/knockout-3.4.1.js"></script>
+
+    <script src="../js/collectionsAndTables.js"></script>
+</head>
+<body>
+
+<h2>Parties</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Party</th>
+        <th>Votes</th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: parties">
+    <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: $root.totalPartyVotes($data)"></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>Voters: (<span data-bind="text: totalVotes ()"></span>)</h2>
+
+<table data-bind="visible: voters().length">
+    <thead>
+    <tr>
+        <th>Voter's name</th>
+        <th>Parties</th>
+        <th>Voting For Chumps?</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody data-bind="foreach: voters">
+    <tr>
+        <td><input data-bind="value: name"/></td>
+        <td><select data-bind="options: $root.parties(), value: party, optionsText: 'name'"></select></td>
+        <td data-bind="text: party().chumps"></td>
+        <td><a href="#" data-bind="click: $root.removeVoter">Remove</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<button data-bind="click: addVoter, enable: voters().length < 10">Add Voter</button>
+</body>
+</html>

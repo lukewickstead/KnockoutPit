@@ -1,0 +1,29 @@
+{
+  "id": "News",
+  "mails": [
+    {
+      "id": 1,
+      "date": "5 June 2016",
+      "subject": "Someone found a dog",
+      "genre": "news"
+    },
+    {
+      "id": 2,
+      "date": "4 June 2016",
+      "subject": "Great Britain abolish the monarchy",
+      "genre": "news"
+    },
+    {
+      "id": 3,
+      "date": "4 June 2016",
+      "subject": "There was a car crash",
+      "genre": "news"
+    },
+    {
+      "id": 4,
+      "date": "3 June 2016",
+      "subject": "Someone ate all the pies!",
+      "genre": "news"
+    }
+  ]
+}
